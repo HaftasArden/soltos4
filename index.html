@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soltos em Salvador - 4ª Temporada - Assistir</title>
+    <meta name="title" content="Soltos em Salvador - 4ª Temporada - Assistir" />
+    <meta name="description" content="
+    Soltos em Salvador T4: Solte sua Curtição!
+    Prepare-se para o verão mais quente de todos com a 4ª temporada de Soltos em Salvador! Dessa vez, o reality vai além do limite com cenas +18 que vão te deixar sem fôlego." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://soltos4.pages.dev/" />
+    <meta property="og:title" content="Soltos em Salvador - 4ª Temporada - Assistir" />
+    <meta property="og:description" content="
+    Soltos em Salvador T4: Solte sua Curtição!
+    Prepare-se para o verão mais quente de todos com a 4ª temporada de Soltos em Salvador! Dessa vez, o reality vai além do limite com cenas +18 que vão te deixar sem fôlego." />
+    <meta property="og:image" content="https://soltos4.pages.dev/images/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://soltos4.pages.dev/" />
+    <meta property="twitter:title" content="Soltos em Salvador - 4ª Temporada - Assistir" />
+    <meta property="twitter:description" content="
+    Soltos em Salvador T4: Solte sua Curtição!
+    Prepare-se para o verão mais quente de todos com a 4ª temporada de Soltos em Salvador! Dessa vez, o reality vai além do limite com cenas +18 que vão te deixar sem fôlego." />
+    <meta property="twitter:image" content="https://soltos4.pages.dev/images/meta-tags.png" />
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+<body id="iau9">
+    <!-- ------- -->
+    <!-- Nav Bar -->
+    <!-- ------- -->
+    <div id="ik6r" class="navbar" x-data="navbar" x-ref="navbar">
+        <div data-gjs="navbar" id="ifq6" class="navbar-container">
+            <div id="i9wt" class="navbar-burger">
+                <div class="navbar-burger-line"></div>
+                <div class="navbar-burger-line"></div>
+                <div class="navbar-burger-line"></div>
+            </div>
+            <div data-gjs="navbar-items" class="navbar-items-c">
+                <nav class="navbar-menu">
+                    <button class="navbar-menu-link" data-umami-event="navbar" data-umami-event-navbar="Last Episode" @click="goTo('last-episode')">Episódio Recente</button>
+                    <button class="navbar-menu-link" data-umami-event="navbar" data-umami-event-navbar="Cuts" @click="goTo('cuts')">Cortes</button>
+                    <button class="navbar-menu-link" data-umami-event="navbar" data-umami-event-navbar="All Episode" @click="goTo('all-episode')">Todos Episódios</button>
+                    <button class="navbar-menu-link" data-umami-event="navbar" data-umami-event-navbar="Others Content" @click="goTo('other-content')">Outros Conteúdos</button>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------ -->
+    <!-- Hero Section -->
+    <!-- ------------ -->
+    <section id="ioq3" class="gjs-grid-row" x-data>
+        <div id="ilyz" class="gjs-grid-column">
+            <img id="iqm2w" src="/assets/images/hero.webp" width="1350" height="911" alt="Hero Banner" />
+            <h1 id="i3du" class="gjs-heading">SOLTOS EM SALVADOR</h1>
+            <button 
+                type="button"
+                id="i2o4"
+                class="gjs-button"
+                data-umami-event="hero-section"
+                @click="document.getElementById('last-episode').scrollIntoView({ behavior: 'smooth'})"
+            >
+                ASSISTIR EPISÓDIOS
+            </button>
+        </div>
+    </section>
+
+    <!-- -------------- -->
+    <!-- Latest Episode -->
+    <!-- -------------- -->
+    <section id="last-episode" class="gjs-section" x-data="episodes">
+        <div id="ivvks" class="gjs-container">
+            <div class="gjs-grid-row">
+                <div class="gjs-grid-column">
+                    <h1 id="i509g" class="gjs-heading">
+                        EPISÓDIO <span id="imfh7"class="gjs-heading-hls">RECENTE</span>
+                    </h1>
+                    <div class="gjs-grid-row">
+                        <div class="gjs-grid-column">
+                            <button 
+                                class="gjs-link-box gjs-card"
+                                data-umami-event="last-episode"
+                                @click="open(latest().iframe)"
+                            >
+                                <img 
+                                    id="ip6tj" 
+                                    x-bind:src="latest().thumbnail" 
+                                    class="gjs-card-thumbnail" 
+                                    alt="Assista ao último episódio lançado" 
+                                />
+                                <div id="in6fh" x-text="latest().name"></div>
+                                <div id="itxvg" class="gjs-button gjs-card-link">ASSISTIR</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------ -->
+    <!-- All Episodes -->
+    <!-- ------------ -->
+    <section id="all-episode" class="gjs-grid-row" x-data="episodes">
+        <div id="izbgn" class="gjs-grid-column">
+            <h1 id="idbfn" class="gjs-heading">
+                <span id="i5jt3" class="gjs-heading-hls">TODOS</span> EPISÓDIOS
+            </h1>
+            <div id="io1zf" class="gjs-grid-row">
+                <template x-for="episode in episodes">
+                    <div class="gjs-grid-column gjs-all-episodes i5xx8">
+                        <button 
+                            class="gjs-link-box iwvkb"
+                            @click="open(episode.iframe, episode.name)"
+                        >
+                            <img 
+                                x-bind:src="episode.thumbnail"
+                                class="iscol"
+                                width="378"
+                                height="261"
+                                alt="Assita ao episódio"
+                            />
+                            <div class="iscsf" x-text="episode.name"></div>
+                            <div class="gjs-button ij16a">ASSISTIR</div>
+                        </button>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <!-- ---- -->
+    <!-- Cuts -->
+    <!-- ---- -->
+    <section id="cuts" class="gjs-section" x-data="cuts">
+        <div id="iok7h" class="gjs-container">
+            <div id="irhdrp" class="gjs-grid-row">
+                <div id="iqh3xh" class="gjs-grid-column">
+                    <h1 id="iw23hx" class="gjs-heading">CORTES</h1>
+                </div>
+            </div>
+            <div id="i2g7qf" class="gjs-grid-row">
+                <div id="ilz94n" class="gjs-grid-column">
+                    <template x-for="cut in cuts">
+                        <a 
+                            x-bind:href="cut.link" 
+                            class="gjs-link-box" 
+                            target="_blank"
+                            data-umami-event="cut"
+                            x-bind:data-umami-event-cut="cut.name"
+                        >
+                            <img 
+                                x-bind:src="cut.thumbnail" 
+                                class="gjs-thumbnail-reality iwhiqb"
+                                width="200"
+                                height="200"
+                                x-bind:alt="`Assista ao corte ${cut.name}`"
+                            />
+                        </a>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------- -->
+    <!-- Others Contents -->
+    <!-- --------------- -->
+    <section id="other-content" class="gjs-section" x-data="reality">
+        <div id="ixghj" class="gjs-container">
+            <h1 id="illwd" class="gjs-heading">
+                Outros <span id="ijqkb" class="gjs-heading-hls">Conteúdos</span>
+            </h1>
+
+            <div id="ipc36" class="gjs-grid-row">
+                <div id="ijuor" class="gjs-grid-column col-1">
+                    <template x-for="reality in realities">
+                        <a 
+                            x-bind:href="reality.url" 
+                            class="gjs-link-box"
+                            data-umami-event="reality"
+                            x-bind:data-umami-event-reality="reality.name"
+                        >
+                            <img x-bind:src="reality.thumbnail" class="gjs-thumbnail-reality izlhw" width="200" height="200" x-bind:alt="reality.name" />
+                            <div class="izw2ut" x-text="`Assista ao ${reality.name}`"></div>
+                        </a>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------- -->
+    <!-- Footer Logo -->
+    <!-- ----------- -->
+    <section id="ib97b" class="gjs-grid-row">
+        <div id="ipvdi" class="gjs-grid-column">
+            <a href="http://realitybr.app" data-umami-event="logo-footer-click">
+                <svg viewBox="0 0 283 324" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com" width="168" height="192">
+                    <defs>
+                      <linearGradient id="gradient-1">
+                        <stop offset="0" style="stop-color: rgb(71, 224, 175);"/>
+                        <stop offset="0.5" style="stop-color: rgb(31, 170, 252);"/>
+                        <stop offset="1" style="stop-color: rgb(199, 79, 224);"/>
+                      </linearGradient>
+                      <linearGradient id="gradient-1-0" gradientUnits="userSpaceOnUse" x1="242.58" y1="105.4" x2="242.58" y2="299.584" gradientTransform="matrix(-0.010988, -1.001776, 0.999362, -0.011002, -65.621613, 343.639694)" xlink:href="#gradient-1"/>
+                      <style bx:fonts="Titillium Web">@import url(https://fonts.googleapis.com/css2?family=Titillium+Web%3Aital%2Cwght%400%2C200%3B0%2C300%3B0%2C400%3B0%2C600%3B0%2C700%3B0%2C900%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C600%3B1%2C700&amp;display=swap);</style>
+                      <style bx:fonts="Poppins">@import url(https://fonts.googleapis.com/css2?family=Poppins%3Aital%2Cwght%400%2C100%3B0%2C200%3B0%2C300%3B0%2C400%3B0%2C500%3B0%2C600%3B0%2C700%3B0%2C800%3B0%2C900%3B1%2C100%3B1%2C200%3B1%2C300%3B1%2C400%3B1%2C500%3B1%2C600%3B1%2C700%3B1%2C800%3B1%2C900&amp;display=swap);</style>
+                    </defs>
+                    <path d="M 226.989 189.273 L 190.059 177.041 C 174.199 188.07 154.898 194.541 134.076 194.541 C 91.75 194.541 55.703 167.802 42.082 130.383 L 108.474 130.383 L 108.474 130.393 L 114.702 130.393 L 114.702 160.734 L 114.738 160.734 C 114.723 162.493 115.407 164.306 116.777 165.72 C 119.238 168.26 123.049 168.614 125.597 166.65 L 125.607 166.642 C 125.783 166.505 125.953 166.357 191.601 102.44 C 192.929 101.197 193.669 99.417 193.669 97.515 C 193.669 94.002 190.866 91.106 187.25 90.7 L 187.251 90.652 C 187.251 90.652 186.391 90.652 99.286 90.652 L 140.759 49.104 L 140.759 64.427 L 140.777 64.427 C 140.777 69.139 140.777 71.958 140.777 71.959 L 140.83 71.959 C 141.187 75.507 143.928 78.294 147.311 78.465 L 147.311 78.474 L 215.6 79.664 C 226.779 79.357 231.015 90.82 231.881 97.855 C 231.755 119.12 224.768 138.767 213.01 154.72 L 226.989 189.273 Z M 36.269 97.27 C 36.268 43.55 80.059 0 134.076 0 C 176.655 0 212.879 27.059 226.311 64.828 L 154.465 64.828 C 154.462 63.893 154.458 62.833 154.453 61.628 L 154.442 61.628 L 154.442 43.149 L 154.445 43.149 C 154.445 36.776 154.445 32.819 154.445 32.818 L 154.443 32.818 C 154.426 31.213 153.861 29.638 152.725 28.396 C 150.338 25.786 146.275 25.563 143.33 27.765 L 143.329 27.764 L 143.318 27.774 C 143.115 27.927 142.916 28.093 135.726 34.743 L 135.736 34.754 C 135.736 34.754 77.526 91.559 76.54 94.631 C 76.053 95.529 75.86 96.494 75.86 97.529 C 75.86 101.068 78.706 103.983 82.362 104.352 L 82.362 104.353 L 82.377 104.353 C 82.615 104.377 82.858 104.389 169.976 104.359 C 158.231 115.789 139.903 133.627 127.939 145.27 C 127.939 145.27 128.012 122.288 127.893 122.288 C 127.332 119.344 125.543 116.796 121.535 116.713 C 121.535 116.713 121.517 116.692 108.474 116.692 L 108.474 116.7 C 108.474 116.7 56.698 116.7 53.726 116.7 C 45.271 116.138 37.767 109.499 36.608 101.237" style="stroke: rgb(0, 0, 0); fill: url(#gradient-1-0); stroke-width: 0px; fill-rule: evenodd;"/>
+                    <text style="font-family: 'Titillium Web'; font-size: 64px; font-weight: 900; white-space: pre; transform-origin: 390.371px 90.003px;" transform="matrix(1, 0, 0, 1.001837, -390.371002, -90.002991)" y="365.271" x="390.371">RealityBR</text>
+                    <text style="fill: rgb(51, 51, 51); font-family: Poppins; font-size: 23.04px; white-space: pre; transform-origin: 257.674px 90.003px;" x="5.056804656982422" y="312.6071090698242">- AO VIVO | 24 HORAS -</text>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- ------------- -->
+    <!-- Modal Episode -->
+    <!-- ------------- -->
+    <div x-data="{ open: false }" id="model-episode" @open-episode.window="open = $event.detail">
+        <div role="dialog" x-show="open">
+            <div
+                x-show="open"
+                x-transition:enter.scale.50.duration.450ms
+                x-transition:leave.opacity.duration.200ms
+                @click.outside="open = false"
+            >
+                <iframe x-bind:src="open" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------- -->
+    <!-- Modal Adult -->
+    <!-- ----------- -->
+    <div x-data="{ open: $persist(true) }" x-cloak @confirm-old-age.window="open = false">
+        <div role="dialog" id="modal-old-age" x-show="open">
+            <div
+                x-show="open"
+                x-transition:enter.scale.50.duration.450ms
+                x-transition:leave.opacity.duration.200ms
+                @click.outside="open = false"
+            >
+                <p class="gjs-heading">Age Verification</p>
+                <p>This website contains age-restricted materials including nudity and explicit depictions of sexual activity. By entering, you affirm that you are at least 18 years of age or the age of majority in the jurisdiction you are accessing the website from and you consent to viewing sexually explicit content.</p>
+                <p class="buttons">
+                    <button class="gjs-button confirm" @click="$dispatch('confirm-old-age')">I'm 18 or older - Enter</button>
+                    <a href="https://realitybr.app" class="gjs-button">I'm under 18 - Exit</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/assets/js/script.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+    <script
+        defer
+        src="https://eu.umami.is/script.js"
+        data-website-id="3aedc8e4-2bc4-4a11-957b-20df12b097e4"
+        data-host-url="https://worker-empty-violet-d8c9.haftasarden.workers.dev"
+        data-cache="true"
+    ></script>
+</body>
+</html>
